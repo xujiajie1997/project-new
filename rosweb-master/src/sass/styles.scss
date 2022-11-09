@@ -1,0 +1,164 @@
+@import 'vars';
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+a.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.header {
+  &#header2 {
+    a.cssNewTab {
+      color:#fff;
+      &:hover, &:active {
+        background-color:darken($ros_color, 15%);
+      }
+    }
+    div.cssTab {
+      background-color:#ccc;
+      a {
+        &.cssEventTab {
+          padding: 0 3px;
+          color:#333;
+        }
+        &.cssEventCloseTab {
+          background-image:url(img/close-16.png);
+        }
+      }
+    }
+  }
+}
+
+div.balloon {
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #333;
+  h2 {
+    color:#fff;
+    text-align:center;
+    padding:5px 0;
+  }
+}
+
+.btn {
+  background-color:#456b91;
+  border: 1px solid #ccc;
+}
+a.btn {
+  border-style: solid;
+  border-width:1px 2px 2px 1px;
+  border-radius:3px;
+  padding:4px 7px;
+  color:white;
+  font-size:16px;
+  text-decoration:none;
+  &.btn-green {
+    background-color:$green;
+    border-color:lighten($green, 10%) darken($green, 10%) darken($green, 10%) lighten($green, 10%);
+    &:active {
+      border-color:darken($green, 10%) lighten($green, 10%) lighten($green, 10%) darken($green, 10%);
+    }
+  }
+  &.btn-red {
+    background-color:$red;
+    border-color:lighten($red, 10%) darken($red, 10%) darken($red, 10%) lighten($red, 10%);
+    &:active {
+      border-color:darken($red, 10%) lighten($red, 10%) lighten($red, 10%) darken($red, 10%);
+    }
+  }
+  &.btn-blue {
+    background-color:$blue;
+    border-color:lighten($blue, 10%) darken($blue, 10%) darken($blue, 10%) lighten($blue, 10%);
+    &:active {
+      border-color:darken($blue, 10%) lighten($blue, 10%) lighten($blue, 10%) darken($blue, 10%);
+    }
+  }
+  &.btn-grey {
+    background-color:$grey;
+    border-color:lighten($grey, 10%) darken($grey, 10%) darken($grey, 10%) lighten($grey, 10%);
+    &:active {
+      border-color:darken($grey, 10%) lighten($grey, 10%) lighten($grey, 10%) darken($grey, 10%);
+    }
+  }
+  &:active {
+    border-width:2px 1px 1px 2px;
+  }
+}
+a.flat-btn {
+  $height: 26px;
+  display: inline-block;
+  margin: 0 10px;
+  height: $height;
+  line-height: $height;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  &.cssToggleMovable {
+    width: $height;
+    height: $height;
+    background-image: url(img/maintenance-white.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    &.active {
+      background-color: #fff;
+      background-image: url(img/maintenance-active.png);
+    }
+  }
+  &.cssOpenWorkspace {
+    width: $height;
+    height: $height;
+    background-image: url(img/open-white.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+  }
+  &.cssSaveWorkspace {
+    width: $height;
+    height: $height;
+    background-image: url(img/save-white.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+  }
+  &.cssRosConnect {
+    width: 26px;
+    background-image: url(img/disconnected.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    &.active {
+      background-image: url(img/connected.png);
+    }
+    &.loading {
+      opacity: 0.5;
+    }
+  }
+  &.alert::after {
+    position:absolute;
+    margin-left:$height - 12px;
+    margin-top:$height - 16px;
+    content:url(img/alert-12.png);
+  }
+}
+input.alert[type=text] {
+  background-color:lighten(red, 30%);
+}
+
+.clearfix {
+  clear:both;
+}
+
+.cssTabContent {
+  border:1px solid #333;
+  border-top-width:0;
+  background-color:#fff;
+}
+
+.cssWidgetItem {
+  color:#fff;
+  text-decoration: none;
+}

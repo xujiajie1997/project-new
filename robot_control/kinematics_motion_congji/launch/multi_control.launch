@@ -1,0 +1,11 @@
+<launch>
+	<node pkg="kinematics_motion" type="motormovecanbus.py" name="motormovecanbus" output="screen"/>
+	<node pkg="kinematics_motion" type="inv_kinematics" name="inv_kinematics" output="screen"/>
+	<node pkg="kinematics_motion" type="velocity_planner" name="velocity_planner" output="screen"/>
+	<!--<node pkg="kinematics_motion" type="fwd_kinematics_4_wheel.py" name="odometry" />-->       
+ <!--<node pkg="kinematics_motion" type="velocity_planner1" name="velocity_planner1" output="screen"/>-->
+	<node pkg="kinematics_motion" type="joystick_control_logic" name="joystick_control_logic" output="screen"/>
+
+	
+	
+</launch>

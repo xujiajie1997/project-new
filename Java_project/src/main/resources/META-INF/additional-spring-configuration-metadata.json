@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "jedis.pool.password",
+      "type": "java.lang.String",
+      "description": "Description for jedis.pool.password."
+  }
+] }

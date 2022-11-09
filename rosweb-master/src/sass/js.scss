@@ -1,0 +1,18 @@
+.jsShow {
+  display:block;
+}
+.jsHide {
+  display:none;
+}
+
+div.jsTab {
+  background-color:#ddd;
+  &.jsActive {
+    background-color:#fff !important;
+  }
+}
+.jsEventTab {
+  &.jsActive {
+    //background-color:#fff !important;
+  }
+}
